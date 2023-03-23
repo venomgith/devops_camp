@@ -1,0 +1,5 @@
+task3_aws/.terraform.lock.hcl
+task3_aws/.terraform/
+task3_aws/terraform.tfstate
+task3_aws/terraform.tfstate.backup
+task3_aws/ec2.tf

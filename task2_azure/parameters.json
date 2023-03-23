@@ -1,0 +1,30 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "loadBalancers_ellingtonlb_name": {
+            "value": null
+        },
+        "publicIPAddresses_ellingtonipip_name": {
+            "value": null
+        },
+        "virtualNetworks_ellington_rg_vnet_name": {
+            "value": null
+        },
+        "virtualMachineScaleSets_ellingtonss_name": {
+            "value": null
+        },
+        "autoscalesettings_ellingtonssautoscale_name": {
+            "value": null
+        },
+        "networkSecurityGroups_basicNsgellington_rg_vnet_nic01_name": {
+            "value": null
+        },
+        "disks_ellingtonss_ellingtonss_0_OsDisk_1_036bb4be193640dea8d4433f9cdd90b3_externalid": {
+            "value": null
+        },
+        "disks_ellingtonss_ellingtonss_1_OsDisk_1_62b5d0fa4e0b41dabc8b62c32413e35a_externalid": {
+            "value": null
+        }
+    }
+}

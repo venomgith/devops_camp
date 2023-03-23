@@ -1,0 +1,28 @@
+---
+- name: Provision IAAS servers
+  hosts: iaas
+
+  roles:
+    - create-iaac-file
+    - fetch-os-version
+
+- name: Print registered variables
+  hosts: iaas
+  become: true
+
+  tasks:
+    - name: Print variables
+      debug:
+        var: os_version
+        verbosity: 1
+
+- name: Print hostnames with variables
+  hosts: iaas
+  become: true
+
+  tasks:
+    - name: Print hostname and variables
+      debug:
+        msg: "{{ inventory_hostname }} has OS version {{ os_version }}"
+        verbosity: 1
+    
