@@ -1,0 +1,26 @@
+- name: Enforce password policy on the system
+  hosts: all
+  become: yes
+  
+  tasks:
+    - name: Install pwquality module for Ubuntu
+      ansible.builtin.apt:
+        name: libpam-pwquality
+        update_cache: yes
+        state: latest
+
+    - name: Configure PAM module to check if password contains the user name in some form and enforces pwquality checks on the root user password 
+      ansible.builtin.lineinfile:
+        path: /etc/security/pwquality.conf
+        regexp: '^usercheck'
+        line: 'usercheck=1'
+        state: present
+        backup: yes
+
+    - name: Configure PAM module to deny passwords containing the user name
+      ansible.builtin.lineinfile:
+        path: /etc/pam.d/common-password
+        regexp: '^(password\s+requisite\s+pam_pwquality\.so).*'
+        line: 'password requisite pam_pwquality.so enforce_for_root retry=3 minlen=8 difok=3 ucredit=-1 lcredit=-2 dcredit=-1 ocredit=-1 reject_username enforce_for_root'
+        state: present
+        backup: yes
