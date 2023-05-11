@@ -20,5 +20,10 @@ B ) The second container ping the first container via a private network
 
 Task 1 
 
+![image](https://github.com/venomgith/devops_camp/assets/97960831/7f77e171-f690-489c-ab79-9f6706ed6e08)
+
+![image](https://github.com/venomgith/devops_camp/assets/97960831/75cb477c-07a1-4b36-8fe0-1305587c916c)
 
 Task 2
+
+![image](https://github.com/venomgith/devops_camp/assets/97960831/b66f9808-f509-403f-b16f-02ba8395ceb2)
