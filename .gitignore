@@ -4,3 +4,4 @@ task3_aws/terraform.tfstate
 task3_aws/terraform.tfstate.backup
 task3_aws/ec2.tf
 task9_jenkins
+task11_kub/terraform

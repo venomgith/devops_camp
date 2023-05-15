@@ -1,0 +1,21 @@
+---
+version: "3.8"
+services:
+  public_cont:
+    image: my-ubuntu-image:latest
+    container_name: public-cont
+    networks:
+      - public-network
+      - private-network
+  privat_cont:
+    image: my-ubuntu-image:latest
+    container_name: privat_cont
+    networks:
+      - private-network
+
+networks:
+  public-network:
+    driver: bridge
+  private-network:
+    driver: bridge
+    internal: true
